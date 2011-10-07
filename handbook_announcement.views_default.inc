@@ -41,12 +41,15 @@ function handbook_announcement_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
+      'link_to_node' => 0,
+      'exclude' => 1,
       'id' => 'title',
       'table' => 'node',
       'field' => 'title',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'field_pnw_announcement_text_value' => array(
       'label' => '',
@@ -242,10 +245,8 @@ function handbook_announcement_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('css_class', 'announcement');
-  $handler->override_option('style_plugin', 'list');
   $handler->override_option('style_options', array(
-    'grouping' => '',
-    'type' => 'ul',
+    'grouping' => 'title',
   ));
   $handler = $view->new_display('block', 'announcement list - homepage', 'block_1');
   $handler->override_option('filters', array(
@@ -355,7 +356,7 @@ function handbook_announcement_views_default_views() {
       'hide_empty' => 0,
       'empty_zero' => 0,
       'link_to_node' => 0,
-      'exclude' => 0,
+      'exclude' => 1,
       'id' => 'title',
       'table' => 'node',
       'field' => 'title',
@@ -401,6 +402,9 @@ function handbook_announcement_views_default_views() {
       'table' => 'node_data_field_pnw_announcement_text',
       'field' => 'field_pnw_announcement_text_value',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Use default',
+      ),
     ),
   ));
   $handler->override_option('arguments', array(
@@ -518,9 +522,67 @@ function handbook_announcement_views_default_views() {
       'validate_argument_php' => '',
     ),
   ));
-  $handler->override_option('style_plugin', 'default');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
+  $handler->override_option('filters', array(
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'node',
+      'field' => 'status',
+      'relationship' => 'none',
+    ),
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'pnw_announcement' => 'pnw_announcement',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'field_pww_announcement_date_value' => array(
+      'operator' => 'between',
+      'value' => array(
+        'value' => NULL,
+        'min' => NULL,
+        'max' => NULL,
+        'default_date' => '12AM today',
+        'default_to_date' => '12PM today',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'date_fields' => array(
+        'node_data_field_pww_announcement_date.field_pww_announcement_date_value' => 'node_data_field_pww_announcement_date.field_pww_announcement_date_value',
+        'node_data_field_pww_announcement_date.field_pww_announcement_date_value2' => 'node_data_field_pww_announcement_date.field_pww_announcement_date_value2',
+      ),
+      'date_method' => 'AND',
+      'granularity' => 'day',
+      'form_type' => 'date_select',
+      'default_date' => '12AM today',
+      'default_to_date' => '12PM today',
+      'year_range' => '-3:+3',
+      'id' => 'field_pww_announcement_date_value',
+      'table' => 'node_data_field_pww_announcement_date',
+      'field' => 'field_pww_announcement_date_value',
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
