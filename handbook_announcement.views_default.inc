@@ -1131,7 +1131,7 @@ function handbook_announcement_views_default_views() {
     ),
     'default' => 'changed',
   ));
-  $handler->override_option('path', 'admin/handbookcontent');
+  $handler->override_option('path', 'admin/content/handbookcontent');
   $handler->override_option('menu', array(
     'type' => 'normal',
     'title' => 'View/Edit Announcements',
