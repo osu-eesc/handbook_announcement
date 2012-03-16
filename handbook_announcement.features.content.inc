@@ -70,11 +70,20 @@ function handbook_announcement_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
+      'node_link' => array(
+        'teaser' => 0,
+        'full' => 1,
+        'title' => 'Add Announcement',
+        'hover_title' => '',
+        'destination' => 'node',
+      ),
+      'fallback' => 'autocomplete',
+      'edit_fallback' => 0,
       'label' => 'Display on page',
       'weight' => '-2',
       'description' => 'Enter a few characters from the title of the page the announcement should be displayed on. When the title that you are looking for appears in the auto-complete list, select it. The announcement will appear at the top of that page within the Publish Dates entered above.',
-      'type' => 'nodereference_autocomplete',
-      'module' => 'nodereference',
+      'type' => 'nodereference_url',
+      'module' => 'nodereference_url',
     ),
   );
 
