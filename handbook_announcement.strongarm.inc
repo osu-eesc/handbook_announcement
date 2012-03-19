@@ -49,13 +49,13 @@ function handbook_announcement_strongarm() {
   $strongarm->name = 'content_extra_weights_pnw_announcement';
   $strongarm->value = array(
     'title' => '-5',
-    'revision_information' => '0',
-    'author' => '1',
+    'revision_information' => '1',
+    'author' => '2',
     'options' => '-1',
-    'menu' => '3',
-    'book' => '5',
-    'path' => '2',
-    'path_redirect' => '4',
+    'menu' => '4',
+    'book' => '6',
+    'path' => '3',
+    'path_redirect' => '5',
   );
   $export['content_extra_weights_pnw_announcement'] = $strongarm;
 

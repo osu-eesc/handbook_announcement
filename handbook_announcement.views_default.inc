@@ -269,6 +269,24 @@ function handbook_announcement_views_default_views() {
       'table' => 'node',
       'field' => 'promote',
     ),
+    'field_display_homepage_value' => array(
+      'operator' => '=',
+      'value' => array(
+        'value' => '0',
+        'min' => '',
+        'max' => '',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'field_display_homepage_value',
+      'table' => 'node_data_field_display_homepage',
+      'field' => 'field_display_homepage_value',
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -342,18 +360,22 @@ function handbook_announcement_views_default_views() {
       'field' => 'field_pww_announcement_date_value',
       'relationship' => 'none',
     ),
-    'promote' => array(
+    'field_display_homepage_value' => array(
       'operator' => '=',
-      'value' => '1',
+      'value' => array(
+        'value' => '1',
+        'min' => '',
+        'max' => '',
+      ),
       'group' => '0',
       'exposed' => FALSE,
       'expose' => array(
         'operator' => FALSE,
         'label' => '',
       ),
-      'id' => 'promote',
-      'table' => 'node',
-      'field' => 'promote',
+      'id' => 'field_display_homepage_value',
+      'table' => 'node_data_field_display_homepage',
+      'field' => 'field_display_homepage_value',
       'override' => array(
         'button' => 'Use default',
       ),

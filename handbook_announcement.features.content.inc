@@ -6,6 +6,73 @@
 function handbook_announcement_content_default_fields() {
   $fields = array();
 
+  // Exported field: field_display_homepage
+  $fields['pnw_announcement-field_display_homepage'] = array(
+    'field_name' => 'field_display_homepage',
+    'type_name' => 'pnw_announcement',
+    'display_settings' => array(
+      'weight' => 0,
+      'parent' => '',
+      'label' => array(
+        'format' => 'inline',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'number_integer',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'number',
+    'active' => '1',
+    'prefix' => '',
+    'suffix' => '',
+    'min' => '',
+    'max' => '',
+    'allowed_values' => '0|0
+1|Display on homepage',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => 0,
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Display on homepage',
+      'weight' => 0,
+      'description' => 'Check to have announcement display on the homepage also.',
+      'type' => 'optionwidgets_onoff',
+      'module' => 'optionwidgets',
+    ),
+  );
+
   // Exported field: field_pnw_announcement_reference
   $fields['pnw_announcement-field_pnw_announcement_reference'] = array(
     'field_name' => 'field_pnw_announcement_reference',
@@ -13,6 +80,17 @@ function handbook_announcement_content_default_fields() {
     'display_settings' => array(
       'weight' => '-2',
       'parent' => '',
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
       '5' => array(
         'format' => 'default',
         'exclude' => 1,
@@ -22,17 +100,6 @@ function handbook_announcement_content_default_fields() {
         'exclude' => 1,
       ),
       '3' => array(
-        'format' => 'default',
-        'exclude' => 1,
-      ),
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 1,
-      ),
-      'full' => array(
         'format' => 'default',
         'exclude' => 1,
       ),
@@ -94,6 +161,17 @@ function handbook_announcement_content_default_fields() {
     'display_settings' => array(
       'weight' => '-4',
       'parent' => '',
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '5' => array(
         'format' => 'default',
         'exclude' => 0,
@@ -103,17 +181,6 @@ function handbook_announcement_content_default_fields() {
         'exclude' => 0,
       ),
       '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -161,6 +228,17 @@ function handbook_announcement_content_default_fields() {
     'display_settings' => array(
       'weight' => '-3',
       'parent' => '',
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
       '5' => array(
         'format' => 'default',
         'exclude' => 1,
@@ -171,17 +249,6 @@ function handbook_announcement_content_default_fields() {
       ),
       '3' => array(
         'format' => 'default',
-        'exclude' => 1,
-      ),
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'hidden',
-        'exclude' => 1,
-      ),
-      'full' => array(
-        'format' => 'hidden',
         'exclude' => 1,
       ),
       '4' => array(
@@ -232,6 +299,7 @@ function handbook_announcement_content_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Announcement');
+  t('Display on homepage');
   t('Display on page');
   t('Publish Dates');
 
