@@ -24,7 +24,7 @@ function handbook_announcement_node_info() {
       'has_body' => '0',
       'body_label' => '',
       'min_word_count' => '0',
-      'help' => t('A listing of announcements will be displayed on the homepage within the Publish Dates. If a display page is entered, the announcement will be shown at the top of that page.'),
+      'help' => '',
     ),
   );
   return $items;
